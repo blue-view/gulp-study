@@ -1,0 +1,19 @@
+{
+  "name": "gulp-app",
+  "version": "1.0.0",
+  "description": "学习如何使用gulp自动化构建工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muziyang",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.7.2"
+  }
+}
