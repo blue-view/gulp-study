@@ -4,6 +4,7 @@ var imagemin=require("gulp-imagemin");
 var uglify=require("gulp-uglify");
 var sass=require("gulp-sass");
 var concat=require("gulp-concat");
+var minifycss=require("gulp-minify-css");
 
 /**
  * 常用的方法
@@ -36,6 +37,7 @@ gulp.task("imageMin",function(){
 gulp.task("sass",function(){
     gulp.src("src/sass/*.scss")
     .pipe(sass().on("error",sass.logError))
+    // .pipe(minifycss())
     .pipe(gulp.dest("dist/css"));
 });
 //合并代码

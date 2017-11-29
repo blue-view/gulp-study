@@ -1,5 +1,15 @@
 $bgColor:#cc6677;
+$red:'red';
+$border:5;
+
 body{
     background: $bgColor;
-    
+    font-size: 14px;
+}
+.red{
+    color: $red;
+}
+.border{
+    border:solid #{$border}px blue;
+    margin:20px+30px;
 }
