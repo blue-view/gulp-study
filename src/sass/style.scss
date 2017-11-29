@@ -1,7 +1,49 @@
+
+
 $bgColor:#cc6677;
 $red:'red';
-$border:5;
-
+$blue:"blue";
+$green:"green";
+$border:6;
+.center{
+text-align: center;
+}
+@mixin bandf($b,$f){
+    padding:solid $b+px red;
+    font-size: $f+px;
+}
+@mixin bgcolor($b){
+    @if ($b==5){
+        background: $red;
+    }
+    @else if($b==6){
+        background: $blue;
+    }
+    @else{
+        background: $green;
+    }
+}
+@for $i from 1 to 5{
+    .a#{$i}{
+        background-image:ulr("./images/#{$i}.png") 
+    }
+   
+}
+$j:1;
+@while $j<5{
+    .b#{$j}{
+        background-image:ulr("./images/#{$j}.png") ;
+    }
+    $j:$j+1;
+}
+@each $k in 1,2,3,4{
+    .c#{$k}{
+        background-image:ulr("./images/#{$k}.png") 
+    }
+}
+@function colorrgba($r,$g,$b,$a){
+    @return rgba($r,$g,$b,$a);
+}
 body{
     background: $bgColor;
     font-size: 14px;
@@ -12,4 +54,11 @@ body{
 .border{
     border:solid #{$border}px blue;
     margin:20px+30px;
+    margin-top:#{$border*$border}px;
+    @extend .center;
+    @include bandf(2,16);
+    @include bgcolor($border);
+    color:colorrgba(112,123,134,.5);
+    
 }
+@import "demo2";
