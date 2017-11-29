@@ -37,7 +37,7 @@ gulp.task("imageMin",function(){
 gulp.task("sass",function(){
     gulp.src("src/sass/*.scss")
     .pipe(sass().on("error",sass.logError))
-    // .pipe(minifycss())
+    .pipe(minifycss())
     .pipe(gulp.dest("dist/css"));
 });
 //合并代码
